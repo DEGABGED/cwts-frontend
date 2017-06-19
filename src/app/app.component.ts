@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import { Book } from './classes/book';
-import { BookService } from './services/book.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,23 +6,6 @@ import { BookService } from './services/book.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
-  constructor(
-    private bookService: BookService
-  ) {}
-  books: Book[];
-  sel_book: Book;
+export class AppComponent {
   title = 'CWTS Library';
-
-  ngOnInit(): void {
-    this.getBooks();
-  }
-
-  getBooks(): void {
-    this.bookService.getBooks().then(books => this.books = books);
-  }
-
-  onSelect(book: Book): void {
-    this.sel_book = book;
-  }
 }

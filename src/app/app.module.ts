@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 // Components
 import { AppComponent } from './app.component';
 import { BooksShowComponent } from './components/books-show.component';
+import { BooksIndexComponent } from './components/books-index.component';
 
 // Services
 import { BookService } from './services/book.service';
@@ -14,7 +15,8 @@ import { BookService } from './services/book.service';
 @NgModule({
   declarations: [
     AppComponent,
-    BooksShowComponent
+    BooksShowComponent,
+    BooksIndexComponent,
   ],
   imports: [
     BrowserModule,

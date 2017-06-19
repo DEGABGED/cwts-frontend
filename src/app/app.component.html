@@ -3,13 +3,5 @@
   <h1>
     {{title}}
   </h1>
-  <h2>List of Books:</h2>
-  <ul class="books">
-    <li *ngFor="let book of books"
-        (click)="onSelect(book)">
-      {{book.title}} by {{book.author}}
-    </li>
-  </ul>
-  <br>
-  <books-show [book]="sel_book"></books-show>
+  <books-index></books-index>
 </div>
