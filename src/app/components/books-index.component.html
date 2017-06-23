@@ -4,6 +4,8 @@
     (click)="onSelect(book)"
     [routerLink]="['/books', book.id]">
     {{book.title}} by {{book.author}}
+    <button class="delete"
+            (click)="delete(book); $event.stopPropagation()">x</button>
   </li>
 </ul>
 <br>

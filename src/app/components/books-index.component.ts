@@ -26,4 +26,13 @@ export class BooksIndexComponent implements OnInit {
   onSelect(book: Book): void {
     this.sel_book = book;
   }
+
+  delete(book: Book): void {
+    this.bookService
+      .delete(book.id)
+      .then(() => {
+        this.books = this.books.filter(b => b !== book);
+        if (this.sel_book === book) { this.sel_book = null; }
+      });
+  }
 }

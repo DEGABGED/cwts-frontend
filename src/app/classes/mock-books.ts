@@ -9,7 +9,7 @@ export const BOOKS: Book[] = [
     batch: 1,
     size: 2,
     callnr: 34,
-    status: 1
+    status: "on_circ"
   }, {
     id: 11,
     title: "Algo Structures",
@@ -18,6 +18,6 @@ export const BOOKS: Book[] = [
     batch: 2,
     size: 0,
     callnr: 33,
-    status: 0
+    status: "in_shelf"
   }
 ];

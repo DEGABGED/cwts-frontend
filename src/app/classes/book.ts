@@ -6,5 +6,5 @@ export class Book {
   batch: number;
   size: number;
   callnr: number;
-  status: number;
+  status: string;
 }

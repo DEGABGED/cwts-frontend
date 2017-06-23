@@ -1,8 +1,6 @@
 <div *ngIf="book">
   <h2>Book: {{book.title}} by {{book.author}}</h2>
-  <div>
-    <input [(ngModel)]="book.title" placeholder="name">
-    <input [(ngModel)]="book.author" placeholder="author">
-  </div>
+  <books-edit [model]="book"></books-edit>
+  <books-borrow [model]="book"></books-borrow>
   <button (click)="goBack()">Back</button>
 </div>
